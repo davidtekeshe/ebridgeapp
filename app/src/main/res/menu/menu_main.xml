@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".ui.MainActivity">
+    <!--item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never"/-->
+
+    <!-- item android:id="@+id/action_insert"
+          android:title="@string/bitcon_title"
+          android:icon="@drawable/bitcoin"
+          android:orderInCategory="400"
+          app:showAsAction="ifRoom" / -->
+
+    <item android:id="@+id/action_chat"
+          android:title="@string/chat_title"
+          android:icon="@drawable/chat_red"
+          android:orderInCategory="300"
+          app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/action_phone"
+          android:title="@string/phone_title"
+          android:icon="@drawable/phone"
+          android:orderInCategory="200"
+          app:showAsAction="ifRoom" />
+
+    <!--item
+        android:id="@+id/action_insert"
+        android:orderInCategory="100"
+        android:title="Insert"
+        app:showAsAction="never>
+    </item -->
+</menu>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/countryName"
+        android:text="Zimbabwe"
+        android:textCursorDrawable="@null"
+        android:textSize="18dp"
+        android:layout_marginBottom="1dp"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:paddingLeft="5dp"
+        android:layout_weight="1"
+        />
+
+    <RelativeLayout
+        android:id="@+id/phoneNumberPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/countryName"
+        >
+
+        <EditText
+            android:id="@+id/countryCodePrefix"
+            android:text="+"
+            android:textSize="18dp"
+            android:clickable="false"
+            android:ems="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/countryCode"
+            android:text="263"
+            android:layout_toRightOf="@+id/countryCodePrefix"
+            android:textSize="18dp"
+            android:layout_marginBottom="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="3"
+            android:textCursorDrawable="@null"
+            android:backgroundTint="@color/colorBlue"
+            android:layout_weight="0">
+                <requestFocus/>
+            </android.support.v7.widget.AppCompatEditText>
+
+        <EditText
+            android:layout_toRightOf="@+id/countryCode"
+            android:text="73 366 1588"
+            android:textSize="18dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginRight="15dp"
+            android:clickable="false"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+    </RelativeLayout>
+
+    <EditText
+        android:layout_below="@+id/phoneNumberPanel"
+        android:text="@string/registrationInstructions"
+        android:textCursorDrawable="@null"
+        android:textSize="13dp"
+        android:layout_marginBottom="1dp"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@null"
+        android:paddingLeft="5dp"
+        android:layout_weight="1"
+        />
+
+</RelativeLayout>

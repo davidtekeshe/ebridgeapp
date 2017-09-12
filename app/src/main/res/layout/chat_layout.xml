@@ -1,0 +1,181 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/background"
+                android:orientation="vertical" >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/chatHeader"
+                  android:layout_width="match_parent"
+                  android:layout_height="56dp"
+                  android:orientation="horizontal"
+                  android:gravity="center_vertical"
+                  android:background="?attr/colorPrimary">
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:gravity="center_vertical"
+            android:src="@drawable/back_arrow"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            />
+        <!-- Thumbnail Image -->
+
+        <com.ebridgevas.android.ebridgeapp.widget.CircleImageView
+            android:id="@+id/chatThumbnail"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginRight="10dip"
+            app:civ_border_width="0dp"
+            app:civ_border_color="@color/light" />
+
+        <TextView
+            android:id="@+id/chatTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/backArrow"
+            android:text="David"
+            style="@style/titleBarHeading"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/msgListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
+        android:layout_marginBottom="4dp"
+        android:clipToPadding="false"
+        android:divider="@drawable/chat_divider"
+        android:scrollbarStyle="outsideOverlay"
+        android:layout_below="@+id/chatHeader"
+        android:layout_above="@+id/form"
+        android:stackFromBottom="false"
+        android:transcriptMode="normal"/>
+    <!--<ListView-->
+        <!--android:id="@+id/msgListView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_above="@+id/form"-->
+        <!--android:divider="@null"-->
+        <!--android:dividerHeight="0dp"-->
+        <!--android:paddingBottom="10dp"-->
+        <!--android:text="@string/hello_world" />-->
+
+    <LinearLayout
+        android:id="@+id/form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp">
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/form"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:background="#91f1f1f1"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:paddingTop="5dp"-->
+        <!--android:paddingBottom="10dp"-->
+        <!--android:paddingLeft="10dp">-->
+
+
+        <!-- EditText
+            android:id="@+id/messageEditText"
+            android:layout_width="252dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/button1"
+            android:layout_toLeftOf="@+id/sendMessageButton"
+            android:layout_weight="0.72"
+            android:ems="10"
+            android:maxHeight="80dp" / -->
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="50dp"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:paddingBottom="15dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="20dp"
+            android:background="@drawable/input">
+
+            <ImageView
+                android:id="@+id/emojiButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="bottom"
+                android:src="@drawable/input_emoji"/>
+
+            <EditText
+                android:id="@+id/messageEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="12dp"
+                android:hint="@string/type_your_message"
+                android:singleLine="false"
+                android:inputType="textMultiLine"
+                android:textSize="18sp"
+                android:textColorHint="#c4c0bd"
+                android:background="@null"/>
+
+        </LinearLayout>
+
+        <!--<EditText-->
+            <!--android:id="@+id/messageEditText"-->
+            <!--android:hint="@string/editTextPlaceholder"-->
+            <!--android:textCursorDrawable="@null"-->
+            <!--android:textColor="@color/colorPrimary"-->
+            <!--android:textSize="17dp"-->
+            <!--android:clickable="false"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:paddingLeft="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:inputType="textMultiLine"-->
+            <!--android:minLines="1"-->
+            <!--android:maxLines="4"-->
+            <!--/>-->
+
+        <!--ImageButton
+            android:id="@+id/sendMessageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/send_button"
+            android:text="d" / -->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/sendMessageButton"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_width="56dp"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:background="@drawable/send_button"-->
+            <!--/>-->
+
+        <ImageButton
+            android:id="@+id/sendMessageButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/input_circle_normal"
+            android:src="@drawable/input_send"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

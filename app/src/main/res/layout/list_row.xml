@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_row_selector"
+                android:padding="0dp">
+
+    <!-- Thumbnail Image -->
+    <com.ebridgevas.android.ebridgeapp.widget.CircleImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp"
+        app:civ_border_width="0dp"
+        app:civ_border_color="@color/light" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="14dp"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:background="@drawable/textlines" >
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/node_text_top_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="@dimen/title"
+            android:layout_marginLeft="0dip"
+            android:layout_marginTop="12dp"
+            android:textStyle="bold" />
+
+        <!-- Sub Title -->
+        <TextView
+            android:id="@+id/node_text_bottom_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sub_title"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="12dp"
+            android:layout_below="@+id/node_text_top_left"
+            android:layout_alignLeft="@+id/node_text_top_left"/>
+
+        <!-- Counter -->
+        <!--<TextView-->
+            <!--android:id="@+id/counter"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:textColor="@color/counter"-->
+            <!--android:textSize="@dimen/counter" />-->
+    <!---->
+        <!--&lt;!&ndash; Sub Counter &ndash;&gt;-->
+        <!--<TextView-->
+            <!--android:id="@+id/subCounter"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignBottom="@+id/counter"-->
+            <!--android:textColor="@color/sub_counter"-->
+            <!--android:textSize="@dimen/sub_counter" />-->
+    </RelativeLayout>
+</RelativeLayout>

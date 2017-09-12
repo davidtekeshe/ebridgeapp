@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:id="@+id/market"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <!--
+    Padding for ViewPager must be set outside the ViewPager itself
+    because with padding, EdgeEffect of ViewPager become strange.
+    -->
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/tab_height">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/marketPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/marketHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:orientation="vertical">
+
+        <!-- android.support.v7.widget.Toolbar
+            android:id="@+id/marketToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+            app:theme="@style/Toolbar" / -->
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:layout_width="match_parent"
+                      android:layout_height="56dp"
+                      android:orientation="horizontal"
+                      android:gravity="center_vertical"
+                      android:background="?attr/colorPrimary">
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:gravity="center_vertical"
+                android:src="@drawable/back_arrow"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"/>
+
+            <com.ebridgevas.android.ebridgeapp.widget.CircleImageView
+                android:id="@+id/chatThumbnail"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="10dip"
+                app:civ_border_width="0dp"
+                app:civ_border_color="@color/light" />
+
+            <TextView
+                android:id="@+id/chatTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/backArrow"
+                android:text="David"
+                style="@style/titleBarHeading"/>
+
+            <android.support.v7.widget.Toolbar
+               android:id="@+id/marketToolbar"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@color/colorPrimary"
+               android:minHeight="@dimen/abc_action_bar_default_height_material"
+               app:popupTheme="@style/Theme.AppCompat.NoActionBar"
+               android:theme="@style/Toolbar" />
+
+        </LinearLayout>
+
+        <com.ebridgevas.android.ebridgeapp.widget.SlidingTabLayout
+            android:id="@+id/marketSlidingTabs"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_height"
+            android:background="@color/colorPrimary" />
+    </LinearLayout>
+
+</FrameLayout>
+
+    <!-- LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:orientation="vertical"
+                  android:background="#f4f4f4" >
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:layout_width="match_parent"
+                      android:layout_height="56dp"
+                      android:orientation="horizontal"
+                      android:gravity="center_vertical"
+                      android:background="?attr/colorPrimary">
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:gravity="center_vertical"
+                android:src="@drawable/back_arrow"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"/>
+
+            <com.ebridgevas.android.ebridgeapp.widget.CircleImageView
+                android:id="@+id/chatThumbnail"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="10dip"
+                app:civ_border_width="0dp"
+                app:civ_border_color="@color/light" />
+
+            <TextView
+                android:id="@+id/chatTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/backArrow"
+                android:text="David"
+                style="@style/titleBarHeading"/>
+
+        </LinearLayout>
+
+        <ExpandableListView
+            android:id="@+id/marketSelectionList"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"/>
+    </LinearLayout -->

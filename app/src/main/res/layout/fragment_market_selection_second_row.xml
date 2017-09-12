@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="8dp">
+
+    <!-- TextView
+        android:id="@+id/eventsListEventRowText"
+        android:paddingLeft="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="15dp"/ -->
+
+    <TableLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:stretchColumns="1"
+        android:layout_marginRight="50dp">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <!-- Title -->
+            <TextView
+                android:id="@+id/productDescription"
+                android:layout_marginLeft="@dimen/title_margin_left"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textSize="@dimen/title"
+                android:textStyle="bold" />
+            <!--TextView
+                android:id="@+id/counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/counter"
+                android:textSize="@dimen/counter" /-->
+            <!-- Sub Title -->
+            <TextView
+                android:id="@+id/productDate"
+                android:text="May 28, 20:30"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_toRightOf="@id/eventsListEventRowText"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="@dimen/sub_counter" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="50dp"
+        android:layout_below="@+id/titleLayout">
+
+        <!-- LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentLeft="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/holo_blue_light"
+                android:text="29/10"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="X"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/holo_blue_light"
+                android:text="17/35"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/holo_blue_light"
+                android:text="55/12"/>
+        </LinearLayout -->
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dip">
+
+            <LinearLayout
+                android:background="@color/holo_gray_bright"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp"
+                android:orientation="horizontal"
+                android:gravity="left">
+
+                <TextView
+                    android:id="@+id/productDescription1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:paddingRight="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="@dimen/sub_title" />
+
+                <TextView
+                    android:id="@+id/productValue1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/holo_gray_bright"
+                    android:text="45/55"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/sub_title"
+                    android:textColor="@color/colorBlue"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/holo_gray_bright"
+                android:layout_marginLeft="2dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/productDescription2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="X"
+                    android:paddingRight="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="@dimen/sub_title" />
+
+                <TextView
+                    android:id="@+id/productValue2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="45/55"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/sub_title"
+                    android:textColor="@color/colorBlue"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/holo_gray_bright"
+                android:layout_marginLeft="2dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/productDescription3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:paddingRight="15dp"
+                    android:gravity="left"
+                    android:textSize="@dimen/sub_title" />
+
+                <TextView
+                    android:id="@+id/productValue3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="45/55"
+                    android:gravity="right"
+                    android:textSize="@dimen/sub_title"
+                    android:textColor="@color/colorBlue"/>
+            </LinearLayout>
+            <!--TextView
+                android:id="@+id/button3"
+                android:text="Column 2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/holo_gray_bright"
+                android:layout_marginLeft="2dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp"
+                android:gravity="center"
+                android:textSize="@dimen/sub_title"/>
+
+            <TextView
+                android:id="@+id/button4"
+                android:text="Column 3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/holo_gray_bright"
+                android:layout_marginLeft="2dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp"
+                android:gravity="right"
+                android:textSize="@dimen/sub_title"/ -->
+        </TableRow>
+    </TableLayout>
+    <!-- Counter -->
+    <TextView
+        android:id="@+id/productRangeCount"
+        android:text="34 >"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/counter"
+        android:textSize="@dimen/counter"
+        android:clickable="true"/>
+
+    <!-- Sub Counter -->
+    <!--TextView
+        android:id="@+id/subCounter"
+        android:text="34 >"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/counter"
+        android:paddingBottom="10dp"
+        android:textColor="@color/sub_counter"
+        android:textSize="@dimen/sub_counter" /-->
+
+</RelativeLayout>

@@ -1,20 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.randstores.ebridgeapp"
+<manifest package="com.ebridgevas.android.ebridgeapp"
           xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Permissions the Application Requires -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme"
+        android:name=".EBridgeApplication">
+
+        <!-- Mqtt Service -->
+        <service android:name="com.ebridgevas.android.ebridgeapp.xmpp.MessagingService" >
+        </service>
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".RegistrationActivity">
+        </activity>
+        <activity
+            android:name=".CountrySelectFragment">
+        </activity>
+        <!--activity android:name=".DialogsActivity"
+                  android:label="@string/app_name">
+
+        </activity>
+        <activity android:name=".ChatActivity"
+                  android:windowSoftInputMode="stateVisible|adjustResize">
+        </activity -->
+        <provider
+            android:authorities="com.ebridgevas.android.ebridgeapp.contentprovider"
+            android:name=".contentprovider.ServicesContentProvider">
+        </provider>
     </application>
 
 </manifest>

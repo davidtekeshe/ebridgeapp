@@ -1,0 +1,46 @@
+<resources>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="margin_standard">16dp</dimen>
+    <dimen name="margin_short">8dp</dimen>
+    <dimen name="margin_extra_short">4dp</dimen>
+
+    <dimen name="toolbar_elevation">4dp</dimen>
+
+    <dimen name="toolbar_margin_start">72dp</dimen>
+    <dimen name="flexible_space_height">72dp</dimen>
+    <dimen name="flexible_space_image_height">240dp</dimen>
+    <dimen name="flexible_space_show_fab_offset">120dp</dimen>
+
+    <dimen name="parallax_image_height">180dp</dimen>
+    <dimen name="tab_height">48dp</dimen>
+
+    <dimen name="header_bar_height">72dp</dimen>
+    <dimen name="intersection_height">16dp</dimen>
+
+    <dimen name="sliding_slop">32dp</dimen>
+    <dimen name="sliding_overlay_blur_size">4dp</dimen>
+
+    <dimen name="title">14dp</dimen>
+    <dimen name="title_margin_left">8dp</dimen>
+    <dimen name="sub_title">12dp</dimen>
+    <dimen name="sub_title_margin_left">8dp</dimen>
+    <dimen name="counter">11dp</dimen>
+    <dimen name="sub_counter">11dp</dimen>
+
+    <dimen name="font_default">16dp</dimen>
+    <dimen name="font_small">12dp</dimen>
+    <dimen name="offset_default">3dp</dimen>
+    <dimen name="padding_default">12dp</dimen>
+
+    <dimen name="data_item_row_height">45dp</dimen>
+    <dimen name="data_item_row_padding">5dp</dimen>
+
+    <dimen name="level_beam_line_width">6dp</dimen>
+    <dimen name="level_beam_line_offset">2dp</dimen>
+</resources>
